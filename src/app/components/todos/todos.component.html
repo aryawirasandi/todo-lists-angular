@@ -1,0 +1,27 @@
+<div class="card shadow-xl m-4">
+    <div class="card-body">
+        <h2 class="card-title text-4xl">{{todo.title}}</h2>
+        <p class="text-small text-2xl">{{todo.description}}</p>
+        <label>Status</label>
+       <div class="flex justify-between items-end">
+        <div class="flex mt-4 gap-[10px] ">
+         <div class="relative">
+          <input type="checkbox"  name="status" id="status"> 
+         </div> 
+@if (todo.status){
+
+            <p>Done</p>     
+}       @else {
+    
+            <p>Un Done</p>      
+} 
+        </div>
+        <div>
+            <p>Release At: {{todo.createdAt}}</p>
+        </div>
+        <a [routerLink]="['/todo/', todo.id]" class="btn btn-info">Show</a>
+        <a [routerLink]="['/todo/', todo.id]" class="btn btn-primary">Update</a>
+        <button class="btn btn-error">Delete</button>
+       </div>  
+    </div>
+</div>

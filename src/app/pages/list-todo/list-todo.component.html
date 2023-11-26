@@ -1,0 +1,9 @@
+<ul>
+    @for (todo of todos; track todo.id){
+       
+<app-todo-component [todo]="todo"/>
+
+    } @empty { 
+     <p>the todo is empty</p>          
+    }
+</ul>

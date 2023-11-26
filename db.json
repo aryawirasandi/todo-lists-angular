@@ -1,0 +1,25 @@
+{
+    "todos": [
+       {
+         "id": "todo-1",
+         "title": "Todo of one or 1",
+         "description": "This is the todo of one or description one",
+         "status": false,
+         "createdAt": "Mon Nov 20 2023 20:22:40 GMT+0800 (Central Indonesia Time)"        
+       },
+       {
+        "id": "todo-2",
+        "title": "Todo of two or 2",
+        "description": "This is the todo of two or description two",
+        "status": true,
+        "createdAt": "Mon Nov 20 2023 20:22:40 GMT+0800 (Central Indonesia Time)"        
+      },
+      {
+        "id": "todo-3",
+        "title": "Todo of three or 3",
+        "description": "This is the todo of three or description three",
+        "status": true,
+        "createdAt": "Mon Nov 20 2023 20:22:40 GMT+0800 (Central Indonesia Time)"        
+      }
+    ]
+}

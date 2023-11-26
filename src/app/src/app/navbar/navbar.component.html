@@ -1,0 +1,12 @@
+<nav class="flex p-4 justify-between">
+   <a [href]="['/']" class="hover:text-blue-500">Home</a> 
+    <ul class="flex gap-[10px]">
+      @for (list of navLists; track list.id){
+       <li>
+        <a [href]="[list.url]" class="hover:text-blue-500">
+         {{list.title}} 
+        </a>
+       </li>
+      }     
+    </ul>
+</nav>
