@@ -7,17 +7,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TodosService {
   httpClient: HttpClient;
+  baseUrl = 'http://localhost:3000';
 
   constructor(HttpClient: HttpClient) {
     this.httpClient = HttpClient;
   }
 
   async getTodos() {
-    return this.httpClient.get<Todos[]>('http://localhost:3000/todos');
+    return this.httpClient.get<Todos[]>(`${this.baseUrl}/todos/`);
   }
 
   async getTodoById(id: string | undefined) {
-    return this.httpClient.get<Todos>('http://localhost:3000/todos/' + id);
+    return this.httpClient.get<Todos>(`${this.baseUrl}/todos/` + id);
+  }
+
+  async createTodo(payload: Todos) {
+    return this.httpClient.post<Todos>(`${this.baseUrl}/todos`, payload);
   }
 
   async updateTodo(id: string, payload: Todos) {}
