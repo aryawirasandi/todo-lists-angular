@@ -16,7 +16,7 @@ export class ListTodoComponent implements OnInit {
   todos: Todos[] = [];
 
   constructor(todoService: TodosService) {
-    this.todoService = todoService.getTodos();
+    this.todoService = todoService;
   }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class ListTodoComponent implements OnInit {
 
   async getListTodo() {
     try {
-      (await this.todoService).subscribe((value) => {
+      (await this.todoService.getTodos()).subscribe((value) => {
         this.todos = value;
       });
     } catch (error) {
