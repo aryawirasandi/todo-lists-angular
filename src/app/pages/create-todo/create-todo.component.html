@@ -1,23 +1,23 @@
 <div class="card w-1/2 mx-auto shadow-xl">
   <div class="card-body">
- <form>
+ <form #todoForm="ngForm">
        <div class="form-control">
-         <label class="label">
-           <span class="label-text">Title Todo</span> 
+         <label class="label" for="title">
+           <span class="label-text">Title Todo</span>
         </label>
-        <input type="text" name="title" id="title" class="input input-bordered w-full" placeholder="input your title todo">
-       </div>    
+        <input type="text" name="title" id="title" class="input input-bordered w-full" placeholder="input your title todo" [(ngModel)]="todos.title">
+       </div>
      <div class="form-control">
-         <label class="label">
-           <span class="label-text">Description Todo</span> 
+         <label class="label" for="description">
+           <span class="label-text">Description Todo</span>
         </label>
-        <input type="text" name="description" id="description" class="input input-bordered w-full" placeholder="input your title todo">
-       </div> 
+        <input type="text" name="description" id="description" class="input input-bordered w-full" placeholder="input your title todo" [(ngModel)]="todos.description">
+       </div>
        <div class="text-center mt-4">
          <button type="submit" class="btn btn-primary">
-            Add A Todo 
+            Add A Todo
          </button>
-       </div>   
+       </div>
     </form>
-  </div>   
+  </div>
 </div>
