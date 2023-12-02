@@ -1,6 +1,6 @@
 <div class="card w-1/2 mx-auto shadow-xl">
   <div class="card-body">
- <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+ <form (ngSubmit)="onUpdate()" #todoForm="ngForm">
        <div class="form-control">
          <label class="label" for="title">
            <span class="label-text">Title Todo</span>
@@ -17,7 +17,7 @@
       </div>
        <div class="text-center mt-4">
          <button type="submit" class="btn btn-primary disabled:btn-secondary" [disabled]="!todoForm.form.valid">
-            Add A Todo
+            Update
          </button>
        </div>
     </form>

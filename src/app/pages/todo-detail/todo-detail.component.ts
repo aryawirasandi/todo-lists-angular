@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { error } from 'console';
-import { catchError } from 'rxjs';
 import { TodosComponent } from '../../components/todos/todos.component';
 import { Todos } from '../../interfaces/todos';
 import { TodosService } from '../../services/todos.service';

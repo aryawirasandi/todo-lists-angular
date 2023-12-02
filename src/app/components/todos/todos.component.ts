@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Todos } from '../../interfaces/todos';
 import { RouterLink } from '@angular/router';
@@ -15,4 +15,14 @@ export class TodosComponent {
     required: true,
   })
   todo!: Todos;
+
+  @Output() deleteTodo = new EventEmitter<string>();
+
+  triggerDeleteTodo(id: string | undefined) {
+    if (typeof id !== 'undefined') {
+      this.deleteTodo.emit(id);
+    } else {
+      alert('failed to delete there is no id here!');
+    }
+  }
 }

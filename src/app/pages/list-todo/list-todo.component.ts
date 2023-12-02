@@ -32,4 +32,16 @@ export class ListTodoComponent implements OnInit {
       console.log(error);
     }
   }
+
+  async deleteATodo(event: string) {
+    console.log(event);
+    try {
+      (await this.todoService.removeTodo(event)).subscribe(() => {
+        this.getListTodo();
+      });
+      // await this.getListTodo();
+    } catch (error) {
+      alert('failed to delete the todo');
+    }
+  }
 }

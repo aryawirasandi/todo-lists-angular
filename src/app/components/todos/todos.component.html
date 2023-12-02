@@ -6,22 +6,22 @@
        <div class="flex justify-between items-end">
         <div class="flex mt-4 gap-[10px] ">
          <div class="relative">
-          <input type="checkbox"  name="status" id="status"> 
-         </div> 
+          <input type="checkbox"  name="status" id="status">
+         </div>
 @if (todo.status){
 
-            <p>Done</p>     
+            <p>Done</p>
 }       @else {
-    
-            <p>Un Done</p>      
-} 
+
+            <p>Un Done</p>
+}
         </div>
         <div>
             <p>Release At: {{todo.createdAt}}</p>
         </div>
         <a [routerLink]="['/todo/', todo.id]" class="btn btn-info">Show</a>
-        <a [routerLink]="['/todo/', todo.id]" class="btn btn-primary">Update</a>
-        <button class="btn btn-error">Delete</button>
-       </div>  
+        <a [routerLink]="['/todo/update', todo.id]" class="btn btn-primary">Update</a>
+        <button (click)="triggerDeleteTodo(todo.id)" class="btn btn-error" type="button">Delete</button>
+       </div>
     </div>
 </div>

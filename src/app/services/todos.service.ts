@@ -25,7 +25,11 @@ export class TodosService {
     return this.httpClient.post<Todos>(`${this.baseUrl}/todos`, payload);
   }
 
-  async updateTodo(id: string, payload: Todos) {}
+  async updateTodo(id: string, payload: Todos) {
+    return this.httpClient.put<Todos>(`${this.baseUrl}/todos/${id}`, payload);
+  }
 
-  async removeTodo(id: string) {}
+  async removeTodo(id: string) {
+    return this.httpClient.delete(`${this.baseUrl}/todos/${id}`);
+  }
 }
